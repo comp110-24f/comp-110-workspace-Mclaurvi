@@ -3,6 +3,9 @@
 
 def less_than_10(num: int) -> bool:
     """tells you if the num is less than 10"""
+    dub: int = num * 2
+    dub = dub - 1
+    print(dub)
     if num < 10:
         print("Small number :(")
     else:
@@ -53,4 +56,24 @@ def how_big(num: int) -> str:
             return "small number!"
 
 
-print(how_big(num=int(input("What is your number?"))))
+# print(how_big(num=int(input("What is your number?"))))
+
+
+def get_weather_report() -> str:
+    weather: str = input("What is the weather?")
+    if weather == "rainy" or weather == "cold":
+        return "bring a jacket!"
+    else:
+        if weather == "hot":
+            return "keep it cool!"
+        else:
+            return "I dont recognize that weather"
+
+
+# print(get_weather_report())
+
+age: int = 10
+age = age + 1
+print(age)
+12 = age
+print (age)
