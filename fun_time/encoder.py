@@ -7,6 +7,7 @@ def code(message: str, sub_num: int) -> None:
     index: int = 0
 
     while index < len(message):  # will continue until end of message
+        if ord(message[index]) + sub_num >= #making sure if the letter is at the end of the alphabet that it will wrap backto the begining
         print(
             chr(ord(message[index]) + sub_num)
         )  # does the substitution by a user-inputed number
