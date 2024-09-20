@@ -1,6 +1,6 @@
 """turns your message into a coded message via a substitution cypher"""
 
-# how do I get the code all in one line?
+# how do I get the output all in one line?
 
 
 def code(message: str, sub_num: int) -> None:
