@@ -37,7 +37,7 @@ def test_only_evens_0() -> None:
 def test_sub_return() -> None:
     """should return sublist of nums in the index interval given"""
     e: list[int] = [2, 4, 6, 8, 10]
-    assert sub(e, 1, 3) == [4, 6, 8]
+    assert sub(e, 1, 3) == [4, 6]
 
 
 def test_sub_mutation() -> None:
@@ -56,7 +56,7 @@ def test_sub_too_big_interval_end() -> None:
 def test_sub_too_big_interval_front() -> None:
     """should just put numbers that are in the list and still in interval"""
     h: list[int] = [1, 5, 10, 15]
-    assert sub(h, -2, 2) == [1, 5, 10]
+    assert sub(h, -2, 2) == [1, 5]
 
 
 # add_at_index tests

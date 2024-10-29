@@ -12,7 +12,7 @@ def only_evens(lst: list[int]) -> list[int]:
 def sub(lst: list[int], start_idx: int, end_idx: int) -> list[int]:
     sub_list: list[int] = []
     idx: int = 0
-    while idx <= end_idx and idx < len(lst):
+    while idx < end_idx and idx < len(lst):
         if idx >= start_idx:
             sub_list.append(lst[idx])
         idx += 1
