@@ -2,6 +2,7 @@ __author__: str = "730669314"
 
 
 def invert(dict_1: dict[str, str]) -> dict[str, str]:
+    """inverts the keys and values of a dict"""
     dict_2: dict[str, str] = {}
     for key in dict_1:
         if dict_1[key] in dict_2:
@@ -13,6 +14,7 @@ def invert(dict_1: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(fav_colors: dict[str, str]) -> str:
+    """returns the color most commonly stated in the values of the dict"""
     color_count: dict[str, int] = {}
     for name in fav_colors:
         if fav_colors[name] in color_count:
@@ -26,9 +28,11 @@ def favorite_color(fav_colors: dict[str, str]) -> str:
     for color in color_count:
         if color_count[color] == highest_count:
             return color
+    return ""
 
 
 def count(list_1: list[str]) -> dict[str, int]:
+    """counts each specific value in the list"""
     final_count: dict[str, int] = {}
     for num in list_1:
         if num in final_count:
@@ -50,9 +54,13 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(
     attendance_dict: dict[str, list[str]], day: str, student: str
-) -> dict[str, list[str]]:
+) -> None:  # doesn't return the dictionary
     if day in attendance_dict:
-        attendance_dict[day].append(student)
+        # doesn't add the name if the student is already written for that day
+        student_list: list[str] = attendance_dict[day]
+        if (
+            student not in student_list
+        ):  # need to remember not in fn, I totally forgot it existed and was so stuck for a while
+            attendance_dict[day].append(student)
     else:
         attendance_dict[day] = [student]
-    return attendance_dict
